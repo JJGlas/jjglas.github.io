@@ -1,0 +1,92 @@
+
+.mainb{
+    /* the paper texture I have in the image folder */
+    width: 100%;
+    background-color: #666;
+    background-image: url(images/Kyle_Paper_Dark.jpg);
+    background-blend-mode: soft-light;
+    background-repeat: repeat;
+    min-height: 100vh;
+    /*make gallery in center of the page with 2 rem padding top and bottom, 8% padding on left and right side*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 8%;
+}
+
+/*masonry gallery using my own images works perfectly, that document folder is saved
+.mainb .gallery{
+  columns:3 250px;
+  gap:1rem;
+}
+*/
+/*works when is specify .mainb .gallery img{ instead of .mainb .gallery .img{ 
+.mainb .gallery .img{
+  border-radius: 5px;
+  width: 100%;
+}
+*/
+
+/*Make colums 4 when have enough pics if i decide the wrong pics are shown big then go back to the square grid below, can aloso specify for some pics to take up 2 columns*/
+.mainb .gallery{
+    /*
+    columns:4 240px;
+    gap: 1rem;
+    */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 1rem;
+    /*
+    padding: 1em;
+    overflow-x: hidden;
+    */
+}
+
+.mainb .gallery img{
+    /*  
+    border-radius: 6px;
+    */  
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    /*
+    position: relative;
+    object-position: 50% 50%;
+    object-fit: cover;
+    
+    background-position: center;
+    background-size: cover;
+    */
+    
+}
+
+/*
+.img:nth-child(1){
+    background-image: url(illustrationImages/img-1.jpg);
+}
+.img:nth-child(2){
+    background-image: url(illustrationImages/img-2.jpg);
+}
+.img:nth-child(3){
+    background-image: url(illustrationImages/img-3.png);
+}
+*/
+
+/*at max width of 1600pixels we will change the width of our container to 100%. wait not need 
+@media(max-width: 1600px){
+    .gallery{
+        width: 100%;
+    }
+}
+*/
+
+/*at min width (vertical phone) make left and right  padding= 0;*/
+/* when width of window hits 960px for tablet mode the following classes are triggered 
+@media screen and (max-width: 960px) {
+    .mainb{
+        padding: 2rem 0%;
+    }
+}
+*/

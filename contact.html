@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <script src="https://kit.fontawesome.com/e49815e090.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            body {
+                font-family: 'Spartan', sans-serif;
+            } 
+        </style>
+    </head>
+    <body>
+        <!-- Navbar Section. A navbar that collapses into 3 lines when the window is dragged small, navbar__container is primary-header in video, adding "flex" makes it so i dont have to add in css--> 
+        <nav class="navbar">
+            <header class="navbar__container flex">
+                <div>
+                    <a href="index.html"><img src="images/jj-logo.jpg" class="navbar__logo"></a>
+                </div>
+                <!--The three horizontal bars. we type id="mobile-menu" so it can be targeted with java script-->
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!--A list of the navbar links, primary-navigation in video, class ff sans in vid  is navbar__links-->
+                <ul class="navbar__menu flex">
+                    <li class="navbar__item">
+                        <a href="index.html" class="navbar__links">Video</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="Photo.html" class="navbar__links">Photo</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="design.html" class="navbar__links">Design</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="illustration.html" class="navbar__links">Illustration</a>
+                    </li>
+                    <li class="navbar__item">
+                        <!--target attribute opens the tos in a new tab-->
+                        <a href="https://jjglaser.gumroad.com" target="_blank" rel="noopener" rel="norefer" class="navbar__links">Shop</a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="contact.html" class="button">Contact</a>
+                    </li> 
+                </ul>
+                
+            </header>
+        </nav>
+
+        <!-- Contact section, the meat of the page. -->
+        <section class="contact">
+            <div class="content">
+                <h2>Submit an Inquiry</h2>
+    
+                <p>Rates vary greatly and are predicted on the specifics of a project. Please provide a concise summary of your project, as well as an approximate budget.
+                </p> 
+                <p>Currently unavailable for immediate hire.
+                </p>   
+                <p>Currently available for booking in advance.
+                </p> 
+            </div>
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="box">
+                        <a href="https://www.youtube.com/@jesse_jonas" class="icon"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="box">
+                        <a href="https://www.Instagram.com/jesse_jonas_art" class="icon"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="box">
+                        <a href="https://www.deviantart.com/jjesseglaser" class="icon"><i class="fab fa-deviantart" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="contactForm">
+                    <!--https://formsubmit.co/el/xeriyo  is my form submit email adress not it will not work until i have a web server. does not work a web page browsed as html-->
+                    <form action="https://formsubmit.co/el/xeriyo" method="POST">
+                        <div class="inputBox">
+                            <input type="text" id="name" placeholder="Name" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="inputBox">
+                            <textarea required="required" rows="4" placeholder="Project description"></textarea>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" id="budget" placeholder="Budget($)" required>
+                        </div>
+                        <div class="inputBox">
+                        <!--target attribute opens the tos in a new tab-->
+                            <a href="termsofservice.html" target="_blank" rel="noopener" rel="norefer" class="tos">Click here to view Terms of Service</a>
+                        </div>
+                        <div class="inputBox">
+                            <p>By clicking "send", you agree to the Terms of Service.</p>
+                        </div>
+                        <div class="inputBox">
+                            <!-- <a href="mailto:jj_glas@outlook.com"></a> -->
+                            <button type="submit">Send</button>    
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <script src="app.js"></script>
+    </body>
+</html>
+

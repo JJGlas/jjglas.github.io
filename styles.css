@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;500&display=swap');
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Contact page */
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*use the paper image in Overlay or Soft Light mode ontop of a dark grey background*/
+    background-image: url(images/Kyle_Paper_Dark.jpg);
+    background-color: #666;
+    background-blend-mode: soft-light;
+    background-repeat: repeat;
+}
+
+.contact .content {
+    max-width: 50em;
+    text-align: center;
+}
+
+.contact .content h2 {
+    font-size: 2.2em;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.contact .content p {
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    /* spacing between paragraphs */
+    margin-bottom: 30px; 
+    /* letter-spacing: 1px; */
+}
+
+/* the container for the contact form */
+.container {
+    width: 100%;
+    max-width: 50em;
+    min-width: 25em;
+    height: 500px;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.icon {
+    color: #fff;
+    transition: color 0.2s;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.box {
+    margin: 10px 0;
+}
+
+.icon:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.container .contactInfo .box .icon {
+    min-width: 60px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactForm {
+    position: relative;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox p{
+    color: #fff;
+}
+
+.contactForm .inputBox .tos{
+    color: #4837ff;
+}
+
+/*TOS*/
+.mainTOS{
+    background-image: url(images/Kyle_Paper_Dark.jpg);
+    background-color: #666;
+    background-blend-mode: soft-light;
+    background-repeat: repeat;
+    min-height: 100vh;
+}
+
+.mainTOS .containerTOS{
+    /* min-width: 400px; */
+    /*
+    max-width: 50%;
+    min-width: 0%;
+    */
+    /*
+    aspect-ratio: 1/1;
+    */
+    max-width: 80em;
+    margin: 0 auto;
+    padding: 2rem 3%;
+}
+
+.mainTOS .containerTOS h1{
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.mainTOS .containerTOS h2{
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.mainTOS .containerTOS h3{
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.mainTOS .containerTOS h4{
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.mainTOS .containerTOS h5{
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/*vertical spacing between list items (the bullet points*/
+.mainTOS .containerTOS li{
+    margin: 10px 0;
+}
+
+.mainTOS .containerTOS .tos-section1{
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    /* spacing between paragraphs */
+    margin-bottom: 30px; 
+    /* letter-spacing: 1px; */
+    margin-left: 30px;
+}
+.mainTOS .containerTOS .tos-section2{
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    /* spacing between paragraphs */
+    margin-bottom: 30px; 
+    /* letter-spacing: 1px; */
+    margin-left: 30px;
+}
+.mainTOS .containerTOS .tos-section3{
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    /* spacing between paragraphs */
+    margin-bottom: 30px; 
+    /* letter-spacing: 1px; */
+    margin-left: 30px;
+}
+
+.mainTOS .containerTOS .tos-section4{
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    /* spacing between paragraphs */
+    margin-bottom: 30px; 
+    /* letter-spacing: 1px; */
+    margin-left: 30px;
+}
+
+.mainTOS .containerTOS .tos-section5{
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    /* spacing between paragraphs */
+    margin-bottom: 30px; 
+    /* letter-spacing: 1px; */
+    margin-left: 30px;
+}
+
+
+
+/* still need to set max width and min width like neenkin */
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    outline: none;
+    resize: none;
+    border-radius: 4px;
+    border: none;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+/* style of the submit button */
+form .inputBox button {
+    padding: 15px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 20px auto 0;
+    border-radius: 6px;
+    border: 2px solid#fff;
+    background: none;
+}
+
+form .inputBox button:hover {
+    background: #4837ff;
+    transition: all 0.3s ease;
+}
+
+
+
+/* Navigation bar */
+/*class navbar doesn not appear to be in the video, his starts at anavbar container*/
+.navbar {
+    /* delete the backgorund color line of code 
+    background: #131313;
+    height: 80px;
+    display: flex;
+    /*
+    justify-content: center;
+    align-items: center;
+    */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/*its being aligned to top of contact rather thatn actual center fix this*/
+.navbar__container {
+    justify-content: space-between;
+    align-items: center;
+    background: #131313;
+    padding: 0 3%;
+}
+
+.navbar__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.navbar__menu a{
+    text-decoration: none;
+    
+}
+
+/*equivalent to class "active" in guys video"*/
+.navbar__item {
+    /*
+    height: 40px;
+    */
+}
+
+.flex{
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.navbar__logo{     
+   
+    /*display flex and align items not working if it does padding top will be not needed*/
+    margin: 0 auto;
+    cursor: pointer;
+    width: 70px;
+    padding-top: 5px; 
+    
+    /*the 3 lines below are currently not working (doing nothing).
+    align-items: center;
+    justify-content: center;
+    object-position: center;
+    */
+}
+
+/*use this class only to style the font/text*/
+.navbar__links {
+    color:#fff;
+    font-size: 1.2em; 
+    
+    /* 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    */
+}
+
+/*underline active link YT: https://youtu.be/JkuiKeNS2mg just need to make sure i have the class in my html called "active"*/
+a:is(:link, :active, :visited).active {   
+    text-decoration: underline #4837ff 0.15rem;
+    text-underline-offset: 0.5rem;
+}
+
+/*underline active navbar link
+.navbar__links[aria-current="page"] {
+    text-decoration:underline #4837ff 0.15rem;
+}
+*/
+
+/* ul li a:visited { 
+    position: absolute;
+    background: #fff;
+    height: 2px;  
+} */
+
+/* targeting the class of current that is inside the class of nav */
+.navbar__menu .current {
+    background-color: #4837ff;
+}
+
+/* The button is just for the Contact link */
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    padding: 0;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    font-size: 1.2em;
+    outline: none;
+    border: 2px solid#fff;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.button:hover {
+    background: #4837ff;
+    transition: all 0.3s ease;
+}
+
+/* .navbar__links:hover {} */
+/* Entering and styling all the subclasses ".navbar__..." of the nav class="navbar" */
+/* when width of window hits 960px actually lets put 55em for tablet mode the following classes are triggered */
+@media screen and (max-width: 55em) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        /*
+        max-width: 1300px;
+        padding: 0;*/
+    }
+
+    /* navbar hamburger drops downwards to reveal the links */
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        /*height: 50vh;*/
+        height: 50rem;
+        z-index: -1;
+        background: #131313;
+    }
+    /* guy says this is the java script that triggers the drop down */
+    .navbar__menu.active {
+        /* delete the backgorund color line of code */
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        /*height: 50vh;*/
+        height: 50rem;
+        font-size: 1.6rem;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbar__logo{     
+        
+        Padding: 5px auto;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* first bar opacity to zero the 2nd two bars of the 3 bar nav hamburger rotate 45 degrees into an X position after clicked */
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /*what to do for CONTACT when width of window hits 55em width for tablet mode*/
+    .container{
+        grid-template-columns: 1fr;
+        /*remove below line if thing break in real use by others*/
+        max-width: 25em;
+    }
+
+    .contactInfo:before {
+        bottom: initial;
+        top: -75px;
+        right: 65px;
+        transform: scale(0.95);
+    }
+
+    .contactForm:before{
+        top: -13px;
+        left: initial;
+        right: 70px;
+    }
+}
+
+/* Hero section CSS */
+/* .main targets the "main" class here we do a grid of images*/
+.main {
+    /* the paper texture I have in the image folder */
+    background-color: #666;
+    background-image: url(images/Kyle_Paper_Dark.jpg);
+    background-blend-mode: soft-light;
+    mix-blend-mode: overlay;
+    background-repeat: repeat;
+    min-height: 100vh;
+     
+}
+
+.main h1 {
+    font-size: 1.7rem;
+    mix-blend-mode: overlay;
+    padding-top: 0.75rem;
+    padding-left: 7%;
+    padding-bottom: none;
+    color: rgb(0, 0, 0);
+}
+
+/* contains each box class in a responsive grid */
+.main__container {
+    
+    display: grid;
+    /* gap between columns */
+    grid-gap: 1rem;
+    /* calculate rows and columns based on space to not let boxes be smaller than 240px */
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    z-index: 1;
+    margin: 0 auto;
+    padding: 1.75rem 3%;
+}
+
+.box__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ..makes this invisible until it is hovered */
+.box__inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items: ; */
+    justify-content: left;
+    padding: 0.25rem;
+    opacity:0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    color: #fff;
+
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* when the box link is hovered, show the box__inner */
+.box__link:hover .box__inner {
+    opacity: 1;
+}
+
+/* make iframe scale properly as i drag resize webpage*/
+.video__main {
+    max-width: 60%;
+    display: block;
+    margin: auto;
+    /* margin-top: 100px;  */
+}
+
+.video__container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* height: 0; */
+}
+.video__container iframe {
+    /* theses settings say let video fit in the full size of the video__ container. */
+    position: absolute;
+    /* left: 0;
+    top: 0; */
+    /* make the iframe video 100% of the size of video__container */
+    height: 100%;
+    width: 100%; 
+    /* height: inherit;  */
+}
+
+
+
+
+
+
+
+
+
