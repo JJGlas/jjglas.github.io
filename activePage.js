@@ -5,4 +5,10 @@ const navLinks = document.querySelectorAll('nav a').forEach(link => {
     link.classList.add('active');
     console.log(link);
   }
+  /*else(${activePage} == link(1);)*/
+  /*if(link.href == null){
+    ${activePage} == link(1);
+  }*/ 
 })
+
+

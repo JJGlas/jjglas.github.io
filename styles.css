@@ -21,6 +21,9 @@
     background-color: #666;
     background-blend-mode: soft-light;
     background-repeat: repeat;
+    /*z-index is like layers in photoshop. The lower the number the lower down the layer is.
+    setting 2 is lower than the navbar drop down menu of 99. Good, no overlaping elements.*/
+    z-index: 2;
 }
 
 .contact .content {
@@ -48,7 +51,8 @@
 .container {
     width: 100%;
     max-width: 50em;
-    min-width: 25em;
+    /*min-width: 25em;*/
+    padding: 0 3%;
     height: 500px;
     z-index: 1000;
     display: grid;
@@ -62,8 +66,8 @@
     text-decoration: none;
 }
 
-.box {
-    margin: 10px 0;
+.iconbox {
+    margin: 0.5rem 0;
 }
 
 .icon:hover {
@@ -273,6 +277,13 @@ form .inputBox button:hover {
     padding: 0 3%;
 }
 
+.navbar__indexcontainer{
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 0 3%;
+}
+
 .navbar__menu {
     list-style: none;
     padding: 0;
@@ -406,7 +417,7 @@ a:is(:link, :active, :visited).active {
         opacity: 0;
         transition: all 0.5s ease;
         /*height: 50vh;*/
-        height: 50rem;
+        height: 35rem;
         z-index: -1;
         background: #131313;
     }
@@ -419,7 +430,7 @@ a:is(:link, :active, :visited).active {
         transition: all 0.5s ease;
         z-index: 99;
         /*height: 50vh;*/
-        height: 50rem;
+        height: 35rem;
         font-size: 1.6rem;
     }
 
@@ -437,7 +448,7 @@ a:is(:link, :active, :visited).active {
 
     .navbar__links {
         text-align: center;
-        padding: 2rem;
+        padding: 1rem;
         width: 100%;
         display: table;
     }
@@ -508,27 +519,22 @@ a:is(:link, :active, :visited).active {
 
 /* Hero section CSS */
 /* .main targets the "main" class here we do a grid of images*/
+
+/*completely commented ot prevously*/
 .main {
-    /* the paper texture I have in the image folder */
+    /* the paper texture I have in the image folder
     background-color: #666;
-    background-image: url(images/Kyle_Paper_Dark.jpg);
     background-blend-mode: soft-light;
     mix-blend-mode: overlay;
-    background-repeat: repeat;
-    min-height: 100vh;
-     
+    background-image: url(images/Kyle_Paper_Dark.jpg);
+    background-repeat: repeat;*/
+    /*make gallery in center of the page with 2 rem padding top and bottom, 8% padding on left and right side
+    place-items: center;
+    */
+    
 }
 
-.main h1 {
-    font-size: 1.7rem;
-    mix-blend-mode: overlay;
-    padding-top: 0.75rem;
-    padding-left: 7%;
-    padding-bottom: none;
-    color: rgb(0, 0, 0);
-}
-
-/* contains each box class in a responsive grid */
+/* contains each box class in a responsive grid uncomment if below does not work*/
 .main__container {
     
     display: grid;
@@ -537,10 +543,58 @@ a:is(:link, :active, :visited).active {
     /* calculate rows and columns based on space to not let boxes be smaller than 240px */
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     z-index: 1;
+    /*fix this padding or margin so that spacing is even on top bottom and left and right.*/
     margin: 0 auto;
-    padding: 1.75rem 3%;
+    padding: 3% 3%;
+    /*place-content: center; */
 }
 
+/*trying out*
+.main .main__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+*/
+
+/*background plexus video*/
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.main h1 {
+    font-size: 1.7rem;
+    mix-blend-mode: overlay;
+    padding-top: 0.75rem;
+    padding-left: 7%;
+    /*padding-bottom: 4rem;*/
+    color: rgb(0, 0, 0);
+}
+
+.box {
+    margin: 0;
+}
+
+/*not used anymore
 .box__link {
     position: relative;
     display: block;
@@ -555,7 +609,7 @@ a:is(:link, :active, :visited).active {
     object-fit: cover;
 }
 
-/* ..makes this invisible until it is hovered */
+/* ..makes this invisible until it is hovered 
 .box__inner {
     position: absolute;
     top: 0;
@@ -564,7 +618,7 @@ a:is(:link, :active, :visited).active {
     right: 0;
     display: flex;
     flex-direction: column;
-    /* align-items: ; */
+    /* align-items: ; 
     justify-content: left;
     padding: 0.25rem;
     opacity:0;
@@ -575,10 +629,11 @@ a:is(:link, :active, :visited).active {
     background: rgba(0, 0, 0, 0.4);
 }
 
-/* when the box link is hovered, show the box__inner */
+/* when the box link is hovered, show the box__inner 
 .box__link:hover .box__inner {
     opacity: 1;
 }
+*/
 
 /* make iframe scale properly as i drag resize webpage*/
 .video__main {
@@ -596,8 +651,10 @@ a:is(:link, :active, :visited).active {
 .video__container iframe {
     /* theses settings say let video fit in the full size of the video__ container. */
     position: absolute;
-    /* left: 0;
-    top: 0; */
+    left: 0px;
+    top: 0px; 
+    right:0px;
+    bottom: 0px;
     /* make the iframe video 100% of the size of video__container */
     height: 100%;
     width: 100%; 
