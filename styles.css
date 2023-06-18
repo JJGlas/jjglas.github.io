@@ -611,7 +611,7 @@ a:is(:link, :active, :visited).active {
 
 .main h1 {
     font-size: 1.7rem;
-    mix-blend-mode: overlay;
+    mix-blend-mode: screen;
     padding-top: 0.75rem;
     padding-left: 7%;
     /*padding-bottom: 4rem;*/
