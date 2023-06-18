@@ -12,6 +12,8 @@
     align-items: center;
     justify-content: center;
     padding: 2rem 8%;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 /*masonry gallery using my own images works perfectly, that document folder is saved

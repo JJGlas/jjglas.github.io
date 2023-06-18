@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Photo</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="illustrationstyles.css">
+        <link rel="stylesheet" href="lightbox.css">
+        <script defer src="activePage.js"></script>
+    </head>
+    <body>
+        <!-- Banner -->
+                <!--
+                    To use a video as your background, set data-video to the name of your video without
+                    its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+                    formats to work correctly. see fullmotion html.
+                -->
+
+        <!-- Navbar Section. A navbar that collapses into 3 lines when the window is dragged small, navbar__container is primary-header in video, adding "flex" makes it so i dont have to add in css--> 
+        <nav class="navbar">
+            <header class="navbar__container flex">
+                <div>
+                    <a href="index.html"><img src="images/jj-logo.jpg" class="navbar__logo"></a>
+                </div>
+                <!--The three horizontal bars. we type id="mobile-menu" so it can be targeted with java script-->
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!--A list of the navbar links, primary-navigation in video, class ff sans in vid  is navbar__links-->
+                <ul class="navbar__menu flex">
+                    <li class="navbar__item">
+                        <a href="index" class="navbar__links">Video</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="photo" class="navbar__links">Photo</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="design" class="navbar__links">Design</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="illustration" class="navbar__links">Illustration</a>
+                    </li>
+                    <li class="navbar__item">
+                        <!--target attribute opens the tos in a new tab-->
+                        <a href="https://jjglaser.gumroad.com" target="_blank" rel="noopener" rel="norefer" class="navbar__links">Shop</a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="contact" class="button">Contact</a>
+                    </li> 
+                </ul>
+                
+            </header>
+        </nav>
+
+        <!-- Hero section. This is the main meat of the page below the navbar -->
+        <div class="mainb">
+            <h1></h1>
+            <div class="gallery">
+                <!-- when video thumbnail img is clicke on light box plug in will activate. right now code for container was deleted so fix that.-->
+                <a href="photoImages/sitkumRdhouse/img-1.jpg" data-title="Victoria town house building"
+                data-lightbox="image-gallery"><img src="photoImages/sitkumRdhouse/img-1.jpg"></a>
+                <a href="photoImages/sitkumRdhouse/img-2.jpg" data-title="Victoria town house, HDR, no flash"
+                data-lightbox="image-gallery"><img src="photoImages/sitkumRdhouse/img-2.jpg"></a>
+                <a href="photoImages/sitkumRdhouse/img-3.jpg" data-title="Victoria town house, HDR, no flash"
+                data-lightbox="image-gallery"><img src="photoImages/sitkumRdhouse/img-3.jpg"></a>
+                <a href="photoImages/sitkumRdhouse/img-4.jpg" data-title="Victoria town house, HDR, no flash"
+                data-lightbox="image-gallery"><img src="photoImages/sitkumRdhouse/img-4.jpg"></a>
+                <a href="designImages/img-5.jpg" data-title="Vancouver Island Digital Watercolour, 2021"
+                data-lightbox="image-gallery"><img src="illustrationImages/img-5.jpg"></a>
+                <a href="designImages/img-6.png" data-title="Vancouver Island Digital Watercolour, 2021"
+                data-lightbox="image-gallery"><img src="illustrationImages/img-6.png"></a>
+            </div>
+        </div>
+        <script src="app.js"></script>
+
+        <!--below is the java script used to make each box open up the popup image when clicked main contained and box might need to be renamed-->
+        <script src="lightbox-plus-jquery.js"></script>
+        <script> </script>
+    </body>
+</html>
