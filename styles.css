@@ -324,13 +324,12 @@ form .inputBox button:hover {
     
 }
 
-/*equivalent to class "active" in guys video"*/
+/*equivalent to class "active" in guys video"
 .navbar__item {
     /*
     height: 40px;
-    */
 }
-
+*/
 .flex{
     display: flex;
     gap: var(--gap, 1rem);
@@ -548,7 +547,7 @@ a:is(:link, :active, :visited).active {
 /* Hero section CSS */
 /* .main targets the "main" class here we do a grid of images*/
 
-/*completely commented ot prevously*/
+/*completely commented out prevously
 .main {
     /* the paper texture I have in the image folder
     background-color: #666;
@@ -557,11 +556,9 @@ a:is(:link, :active, :visited).active {
     background-image: url(images/Kyle_Paper_Dark.jpg);
     background-repeat: repeat;*/
     /*make gallery in center of the page with 2 rem padding top and bottom, 8% padding on left and right side
-    place-items: center;
-    */
-    
+    place-items: center;    
 }
-
+*/ 
 /* contains each box class in a responsive grid uncomment if below does not work*/
 .main__container {
     
@@ -610,14 +607,29 @@ a:is(:link, :active, :visited).active {
 }
 
 .main h1 {
-    font-size: 1.7rem;
-    mix-blend-mode: screen;
+    font-size: 1.5em;
+    font-weight:400;
+    /*mix-blend-mode: color;*/
     padding-top: 0.75rem;
     padding-left: 7%;
-    /*padding-bottom: 4rem;*/
-    color: rgb(255, 255, 255);
+    color: #fff;
+    /*color: #0055FF;*/
+    /*text-shadow: 0.025em, 0.025em, 0, white;*/
 }
-
+/*
+.main h2 {
+    font-size: 1.7em;
+    font-weight: 500;
+    padding-top: 0.75rem;
+    padding-left: 7%;
+    z-index: 1;
+    color: transparent;
+    /*text-shadow: 3px, 3px, 0, white;
+    -webkit-text-stroke: 0.01em #fff;
+    position: absolute;
+    /*position: absolute; allows me to place an item exactly where i specify it thus letting me overlap 2 elements
+}
+*/
 .box {
     margin: 0;
 }
