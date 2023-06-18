@@ -615,7 +615,7 @@ a:is(:link, :active, :visited).active {
     padding-top: 0.75rem;
     padding-left: 7%;
     /*padding-bottom: 4rem;*/
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .box {
