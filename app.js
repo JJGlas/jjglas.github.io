@@ -9,16 +9,6 @@ menu.addEventListener('click', function() {
 });
 
 
-
-/*underline active navbar link https://youtu.be/HpjW9eaFLIg
-document.querySelectorAll('.nav-links').forEach
-(link =>{
-    if(link.href === window.location.href){
-        link.setAttribute('aria-current', 'page')
-    }
-})
-*/
-
 //Image Gallery
 let galleryImages = document.querySelectorAll('.box');
 let getLatestOpenedImg;
