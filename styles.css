@@ -365,18 +365,23 @@ form .inputBox button:hover {
     */
 }
 
-/*underline active link YT: https://youtu.be/JkuiKeNS2mg just need to make sure i have the class in my activePage.js called "active"
+/*underline active link YT: https://youtu.be/JkuiKeNS2mg just need to make sure i have the class in my html called "active"*/
 a:is(:link, :active, :visited).active {   
     text-decoration: underline #4837ff 0.15rem;
     text-underline-offset: 0.5rem;
 }
+
+/*underline active navbar link
+.navbar__links[aria-current="page"] {
+    text-decoration:underline #4837ff 0.15rem;
+}
 */
 
-.active {
-    text-decoration: underline #4837ff 0.15rem;
-    text-underline-offset: 0.5rem;
-}    
-
+/* ul li a:visited { 
+    position: absolute;
+    background: #fff;
+    height: 2px;  
+} */
 
 /* targeting the class of current that is inside the class of nav */
 .navbar__menu .current {
