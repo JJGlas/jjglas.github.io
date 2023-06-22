@@ -17,7 +17,7 @@
     align-items: center;
     flex-direction: column;
     /*use the paper image in Overlay or Soft Light mode ontop of a dark grey background*/
-    background-image: url(images/Kyle_Paper_Dark.jpg);
+    background-image: url(images/Kyle_Paper_Dark.avif);
     background-color: #666;
     background-blend-mode: soft-light;
     background-repeat: repeat;
@@ -95,7 +95,7 @@
 */
 
 .container .contactInfo {
-    background-image: url(images/jj-logo.jpg);
+    background-image: url(images/jj-logo.avif);
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -129,7 +129,7 @@
 
 /*TOS*/
 .mainTOS{
-    background-image: url(images/Kyle_Paper_Dark.jpg);
+    background-image: url(images/Kyle_Paper_Dark.avif);
     background-color: #666;
     background-blend-mode: soft-light;
     background-repeat: repeat;
@@ -449,7 +449,7 @@ a:is(:link, :active, :visited).active {
         transition: all 0.5s ease;
         z-index: 99;
         /*height: 50vh;*/
-        height: 35rem;
+        height: 34rem;
         font-size: 1.6rem;
     }
 
@@ -466,6 +466,13 @@ a:is(:link, :active, :visited).active {
     }
 
     .navbar__links {
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbar__shop {
         text-align: center;
         padding: 1rem;
         width: 100%;

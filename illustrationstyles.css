@@ -3,7 +3,7 @@
     /* the paper texture I have in the image folder */
     width: 100%;
     background-color: #666;
-    background-image: url(images/Kyle_Paper_Dark.jpg);
+    background-image: url(images/Kyle_Paper_Dark.avif);
     background-blend-mode: soft-light;
     background-repeat: repeat;
     min-height: 100vh;
