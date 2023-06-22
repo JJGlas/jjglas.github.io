@@ -354,34 +354,25 @@ form .inputBox button:hover {
 .navbar__links {
     color:#fff;
     font-size: 1.2em; 
-    
-    /* 
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
-    */
 }
 
-/*underline active link YT: https://youtu.be/JkuiKeNS2mg just need to make sure i have the class in my html called "active"*/
+/*use this class only to style the font/text*/
+.navbar__shop {
+    color:#fff;
+    font-size: 1.2em; 
+}
+
+/*underline active link YT: https://youtu.be/JkuiKeNS2mg just need to make sure i have the class in my activePage.js called "active"*/
 a:is(:link, :active, :visited).active {   
     text-decoration: underline #4837ff 0.15rem;
     text-underline-offset: 0.5rem;
 }
 
-/*underline active navbar link
-.navbar__links[aria-current="page"] {
-    text-decoration:underline #4837ff 0.15rem;
-}
+/*
+.active {
+    color: #4837ff;
+}    
 */
-
-/* ul li a:visited { 
-    position: absolute;
-    background: #fff;
-    height: 2px;  
-} */
 
 /* targeting the class of current that is inside the class of nav */
 .navbar__menu .current {
@@ -419,6 +410,7 @@ a:is(:link, :active, :visited).active {
 }
 
 /* .navbar__links:hover {} */
+
 /* Entering and styling all the subclasses ".navbar__..." of the nav class="navbar" */
 /* when width of window hits 960px actually lets put 55em for tablet mode the following classes are triggered */
 @media screen and (max-width: 55em) {
