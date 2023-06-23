@@ -7,6 +7,11 @@
     font-family: 'Spartan', sans-serif;
 }
 
+/*to remove white bleed on right of page when page hits 55em tablet mode*/
+body,html {
+    overflow-x: hidden;
+}
+
 /* Contact page */
 .contact {
     width: 100%;
@@ -436,7 +441,7 @@ a:is(:link, :active, :visited).active {
         opacity: 0;
         transition: all 0.5s ease;
         /*height: 50vh;*/
-        height: 35rem;
+        height: 34rem;
         z-index: -1;
         background: #131313;
     }
@@ -449,7 +454,7 @@ a:is(:link, :active, :visited).active {
         transition: all 0.5s ease;
         z-index: 99;
         /*height: 50vh;*/
-        height: 34rem;
+        height: 33rem;
         font-size: 1.6rem;
     }
 
@@ -555,9 +560,10 @@ a:is(:link, :active, :visited).active {
     background-image: url(images/Kyle_Paper_Dark.jpg);
     background-repeat: repeat;*/
     /*make gallery in center of the page with 2 rem padding top and bottom, 8% padding on left and right side
-    place-items: center;    
+    place-items: center; 
 }
-*/ 
+*/
+
 /* contains each box class in a responsive grid uncomment if below does not work*/
 .main__container {
     
@@ -585,7 +591,8 @@ a:is(:link, :active, :visited).active {
 
 /*background plexus video*/
 .back-video{
-    position: absolute;
+    /*position: fixed instead of absolute allows the bg video to move down to fit the screen as I scroll in tablet mode*/
+    position: fixed;
     right: 0;
     bottom: 0;
     z-index: -1;
