@@ -31,7 +31,7 @@ body,html {
     z-index: 2;
     padding: 3% 8%;
     margin: 0;
-    overflow-y: hidden;
+    overflow: auto;
 }
 
 .contact .content {
@@ -286,16 +286,8 @@ form .inputBox button:hover {
 
 
 /* Navigation bar */
-/*class navbar doesn not appear to be in the video, his starts at anavbar container*/
+/*class navbar doesn not appear to be in the video, his starts at a navbar container*/
 .navbar {
-    /* delete the backgorund color line of code 
-    background: #131313;
-    height: 80px;
-    display: flex;
-    /*
-    justify-content: center;
-    align-items: center;
-    */
     position: sticky;
     top: 0;
     z-index: 999;
