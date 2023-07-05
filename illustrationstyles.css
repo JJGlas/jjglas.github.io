@@ -1,7 +1,9 @@
-
 .mainb{
     /* the paper texture I have in the image folder */
     width: 100%;
+    /*the 2 lines below make the mainb div up to the top of of the viewport*/
+    position: absolute;
+    top:0;
     background-color: #666;
     background-image: url(images/Kyle_Paper_Dark.avif);
     background-blend-mode: soft-light;
@@ -11,10 +13,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 8%;
-    margin: 0;
+    padding: 7rem 8%;
+    /*margin-top: 80px;*/
 }
-
 /*masonry gallery using my own images works perfectly, that document folder is saved
 .mainb .gallery{
   columns:3 250px;

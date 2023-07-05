@@ -10,12 +10,14 @@
 /*to remove white bleed on right of page when page hits 55em tablet mode*/
 body,html {
     overflow-x: hidden;
+    margin: 0;
 }
 
-/* Contact page */
+/* Contact page *FIX: only in tablet mode the background leaves a tiny margin*/
 .contact {
     width: 100%;
-    position: relative;
+    position: absolute;
+    top: 0;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -29,9 +31,7 @@ body,html {
     /*z-index is like layers in photoshop. The lower the number the lower down the layer is.
     setting 2 is lower than the navbar drop down menu of 99. Good, no overlaping elements.*/
     z-index: 2;
-    padding: 3% 8%;
-    margin: 0;
-    overflow: auto;
+    padding: 7rem 8%;
 }
 
 .contact .content {
@@ -288,7 +288,7 @@ form .inputBox button:hover {
 /* Navigation bar */
 /*class navbar doesn not appear to be in the video, his starts at a navbar container*/
 .navbar {
-    position: sticky;
+    position: sticky; /*if encounter problems put position relative*/
     top: 0;
     z-index: 999;
 }
@@ -320,16 +320,11 @@ form .inputBox button:hover {
     
 }
 
-/*equivalent to class "active" in guys video"
-.navbar__item {
-    /*
-    height: 40px;
-}
-*/
 .flex{
     display: flex;
     gap: var(--gap, 1rem);
 }
+
 
 .navbar__logo{     
    
@@ -410,8 +405,9 @@ a:is(:link, :active, :visited).active {
 /* Entering and styling all the subclasses ".navbar__..." of the nav class="navbar" */
 /* when width of window hits 960px actually lets put 55em for tablet mode the following classes are triggered */
 @media screen and (max-width: 55em) {
+    /*dont need this in here even. It currently dores nothing*/
     .navbar__container {
-        display: flex;
+        /*
         justify-content: space-between;
         height: 80px;
         z-index: 1;
@@ -419,28 +415,32 @@ a:is(:link, :active, :visited).active {
         /*
         max-width: 1300px;
         padding: 0;*/
+        margin: 0;
     }
 
     /* navbar hamburger drops downwards to reveal the links */
     .navbar__menu {
         display: grid;
         grid-template-columns: auto;
-        margin: 0;
+     
         width: 100%;
-        position: absolute;
+        /*position: absolute; used to have this*/
+        position: fixed;
         top: -1000px;
         opacity: 0;
         transition: all 0.5s ease;
-        /*height: 50vh;*/
-        height: 34rem;
+        /*height: 100vh;*/
+        height: 33rem;
         z-index: -1;
         background: #131313;
+        
     }
-    /* guy says this is the java script that triggers the drop down */
+    /* guy says this is the java script that triggers the drop down. Try to prevent 3% margin and drop down zindex problem due to setting position absolute*/
     .navbar__menu.active {
         /* delete the backgorund color line of code */
         background: #131313;
-        top: 100%;
+        
+        top: 80px;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
@@ -524,7 +524,7 @@ a:is(:link, :active, :visited).active {
         /*remove below line if thing break in real use by others*/
         max-width: 25em;
     }
-
+    /*
     .contactInfo:before {
         bottom: initial;
         top: -75px;
@@ -537,6 +537,14 @@ a:is(:link, :active, :visited).active {
         left: initial;
         right: 70px;
     }
+    */
+    
+    /*see why background is not long enough to see send button. It is ONLY in tablet mode so only adjust the below
+    I beleive I need the button to have paddingon the bottom possibly
+    .contact {
+        /*overflow: hidden;
+    }
+    */
 }
 
 /* Hero section CSS */
@@ -570,7 +578,7 @@ a:is(:link, :active, :visited).active {
     /*place-content: center; */
 }
 
-/*trying out*
+/*trying out would stil be very nice to get to work.*
 .main .main__container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -631,7 +639,7 @@ a:is(:link, :active, :visited).active {
     margin: 0;
 }
 
-/*not used anymore
+/*not used anymore. use for avif moving image
 .box__link {
     position: relative;
     display: block;
