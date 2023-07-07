@@ -1,40 +1,25 @@
 // targeting the list of navabr links to get a java script animation going
 const menu = document.querySelector('#mobile-menu')
 const menuLinks = document.querySelector('.navbar__menu')
+//const lockScroll = document.querySelector('body')
 
-// toggle the drop down list aniamtion when the threebars are clicked on
+// toggle the drop down list aniation when the three bars are clicked on
 menu.addEventListener('click', function() {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
+    //lockScroll.classList.toggle('lock-scroll');
 });
 
 
-//Image Gallery
-let galleryImages = document.querySelectorAll('.box');
-let getLatestOpenedImg;
-let windowWidth = window.innerWidth;
-
-galleryImages.forEach(function(image, index){
-    image.onclick = function() {
-
-        getLatestOpenedImg = index + 1;
-        //letting the container be the entire site aka documet body.
-        let container = document.body;
-        let newImgWindow = document.createElement('div');
-        container.appendChild(newImgWindow);
-        newImgWindow.setAttribute('class', 'img-window');
-        newImgWindow.setAttribute('onclick', 'closeImg()');
-    }
-})
-
-//
-function closeImg() {
-    document.querySelector('.img-window').remove();
-    document.querySelector('.img-btn-next').remove();
-    document.querySelector('.img-btn-prev').remove();
+/*
+if ($('#mobile__menu').is(':visible')) {
+    $('body').addClass("fixed-position");
+} else {
+    $('body').removeClass("fixed-position");
 }
-
-//close image in gallery by clicking on it
-function changeImg(change) {
-
+*/
+/*
+lockScroll {
+    document.body.classList.toggle('lock-scroll');
 }
+*/

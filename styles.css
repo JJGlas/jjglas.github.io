@@ -402,10 +402,12 @@ a:is(:link, :active, :visited).active {
 
 /* .navbar__links:hover {} */
 
+
+
 /* Entering and styling all the subclasses ".navbar__..." of the nav class="navbar" */
 /* when width of window hits 960px actually lets put 55em for tablet mode the following classes are triggered */
 @media screen and (max-width: 55em) {
-    /*dont need this in here even. It currently dores nothing*/
+    /*dont need this in here even. It currently does nothing
     .navbar__container {
         /*
         justify-content: space-between;
@@ -414,7 +416,7 @@ a:is(:link, :active, :visited).active {
         width: 100%;
         /*
         max-width: 1300px;
-        padding: 0;*/
+        padding: 0;
         margin: 0;
     }
 
@@ -429,24 +431,34 @@ a:is(:link, :active, :visited).active {
         top: -1000px;
         opacity: 1;
         transition: all 0.5s ease;
-        /*height: 100vh;*/
-        height: 32.25rem;
+        height: 100vh;
+        /*height: 32.25rem;*/
         z-index: -1;
         background: #131313;
         
     }
     /* guy says this is the java script that triggers the drop down. Try to prevent 3% margin and drop down zindex problem due to setting position absolute*/
     .navbar__menu.active {
-        /* delete the backgorund color line of code */
+        /* delete the background color line of code */
         background: #131313;
         
-        top: 79px;
+        top: 0;
+        padding-top: 80px; 
+        /*padding-bottom: 10rem;*/
         opacity: 1;
         transition: all 0.5s ease;
         z-index: -1;
-        /*height: 50vh;*/
-        height: 32.25rem;
+        height: 100vh;
+        /*height: 32.25rem;*/
         font-size: 1.6rem;
+        justify-content: center;
+        
+    }
+
+    /*make body of page unscrollable when mobile drop down is visible*/
+    .lock-scroll {
+        /*position: fixed;*/
+        overflow-y: hidden;
     }
 
     .navbar__toggle .bar {
@@ -479,6 +491,7 @@ a:is(:link, :active, :visited).active {
         
         Padding: 5px auto;
     }
+
 
     #mobile-menu {
         position: absolute;
@@ -518,27 +531,14 @@ a:is(:link, :active, :visited).active {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+
     /*what to do for CONTACT when width of window hits 55em width for tablet mode*/
     .container{
         grid-template-columns: 1fr;
         /*remove below line if thing break in real use by others*/
         max-width: 25em;
     }
-    /*
-    .contactInfo:before {
-        bottom: initial;
-        top: -75px;
-        right: 65px;
-        transform: scale(0.95);
-    }
 
-    .contactForm:before{
-        top: -13px;
-        left: initial;
-        right: 70px;
-    }
-    */
-    
     /*see why background is not long enough to see send button. It is ONLY in tablet mode so only adjust the below
     I beleive I need the button to have paddingon the bottom possibly
     .contact {
