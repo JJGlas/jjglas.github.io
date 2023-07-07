@@ -427,10 +427,10 @@ a:is(:link, :active, :visited).active {
         /*position: absolute; used to have this*/
         position: fixed;
         top: -1000px;
-        opacity: 0;
+        opacity: 1;
         transition: all 0.5s ease;
         /*height: 100vh;*/
-        height: 33rem;
+        height: 32.25rem;
         z-index: -1;
         background: #131313;
         
@@ -440,12 +440,12 @@ a:is(:link, :active, :visited).active {
         /* delete the backgorund color line of code */
         background: #131313;
         
-        top: 80px;
+        top: 79px;
         opacity: 1;
         transition: all 0.5s ease;
-        z-index: 99;
+        z-index: -1;
         /*height: 50vh;*/
-        height: 33rem;
+        height: 32.25rem;
         font-size: 1.6rem;
     }
 
