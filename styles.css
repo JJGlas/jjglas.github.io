@@ -435,7 +435,6 @@ a:is(:link, :active, :visited).active {
         /*height: 32.25rem;*/
         z-index: -1;
         background: #131313;
-        
     }
     /* guy says this is the java script that triggers the drop down. Try to prevent 3% margin and drop down zindex problem due to setting position absolute*/
     .navbar__menu.active {
@@ -444,15 +443,17 @@ a:is(:link, :active, :visited).active {
         
         top: 0;
         padding-top: 80px; 
-        /*padding-bottom: 10rem;*/
+        padding-bottom: 80px;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: -1;
         height: 100vh;
         /*height: 32.25rem;*/
-        font-size: 1.6rem;
-        justify-content: center;
+        font-size: 1.4em;
         
+        /*display:table;*/
+        /*not working for go vertically in center cant figure out why. if i dont put display table the objects flext across 100vh*/
+        object-position: center;
     }
 
     /*make body of page unscrollable when mobile drop down is visible*/
@@ -471,18 +472,19 @@ a:is(:link, :active, :visited).active {
 
     .navbar__item {
         width: 100%;
+        margin-bottom: 0.5em;
     }
 
     .navbar__links {
         text-align: center;
-        padding: 1rem;
+        padding: 0;
         width: 100%;
         display: table;
     }
 
     .navbar__shop {
         text-align: center;
-        padding: 1rem;
+        padding: 0.25rem;
         width: 100%;
         display: table;
     }
@@ -501,14 +503,14 @@ a:is(:link, :active, :visited).active {
     }
 
     .navbar__btn {
-        padding-bottom: 2rem;
+        padding-bottom: 0;
     }
 
     .button {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 50%;
         height: 80px;
         margin: 0;
     }
