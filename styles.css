@@ -428,13 +428,16 @@ a:is(:link, :active, :visited).active {
         width: 100%;
         /*position: absolute; used to have this*/
         position: fixed;
-        top: -1000px;
+        top: -100vh;
         opacity: 1;
         transition: all 0.5s ease;
         height: 100vh;
         /*height: 32.25rem;*/
+        font-size: 1.4em;
         z-index: -1;
         background: #131313;
+        padding-top: 0; 
+        padding-bottom: 0;
     }
     /* guy says this is the java script that triggers the drop down. Try to prevent 3% margin and drop down zindex problem due to setting position absolute*/
     .navbar__menu.active {
@@ -442,7 +445,7 @@ a:is(:link, :active, :visited).active {
         background: #131313;
         
         top: 0;
-        padding-top: 90px; 
+        padding-top: 20%; 
         padding-bottom: 30%;
         opacity: 1;
         transition: all 0.5s ease;
