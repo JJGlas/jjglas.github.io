@@ -365,8 +365,8 @@ a:is(:link, :active, :visited).active {
     background: #00a39b;
     height: 0.15rem;
     /*width: 100%;*/
-    bottom: 0.5rem;
-    position: absolute;
+    bottom: 0.15rem;
+    /*position: absolute;*/
     /*left: 0;*/
 }
 
