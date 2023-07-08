@@ -353,25 +353,27 @@ form .inputBox button:hover {
     font-size: 1.2em; 
 }
 
-/*old underline active link YT: https://youtu.be/JkuiKeNS2mg just need to make sure i have the class in my activePage.js called "active"
+/*underline active link YT: https://youtu.be/JkuiKeNS2mg just need to make sure i have the class in my activePage.js called "active"*/
 a:is(:link, :active, :visited).active {   
     text-decoration: underline #4837ff 0.15rem;
     text-underline-offset: 0.5rem;
-}
-*/
-/*making the text underline active link in a different way so all browsers support it*/
-a:is(:link, :active, :visited).active { 
-    /*content: '';  */
-    background: #00a39b;
-    background-size: 0.15rem;
-    offset-position: 0.15rem;
-    /*height: 0.15rem;*/
-    /*width: 100%;*/
-    /*bottom: 0.15rem;*/
-    /*position: absolute;*/
-    /*left: 0;*/
+    -webkit-text-decoration: underline;
+    -webkit-text-decoration: #4837ff;
+    -webkit-text-decoration: solid;
+    -webkit-text-decoration: 0.15rem;
 }
 
+/*making the text underline active link in a different way so all browsers support it
+a:is(:link, :active, :visited).active { 
+    content: '';  
+    background-color: #4837ff;
+    height: 0.15rem;
+    width: 100%;
+    bottom: 0.15rem;
+    position: absolute;
+    left: 0;
+}
+*/
 /*
 .active {
     color: #4837ff;
