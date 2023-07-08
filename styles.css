@@ -363,9 +363,11 @@ a:is(:link, :active, :visited).active {
 a:is(:link, :active, :visited).active { 
     /*content: '';  */
     background: #00a39b;
-    height: 0.15rem;
+    background-size: 0.15rem;
+    offset-position: 0.15rem;
+    /*height: 0.15rem;*/
     /*width: 100%;*/
-    bottom: 0.15rem;
+    /*bottom: 0.15rem;*/
     /*position: absolute;*/
     /*left: 0;*/
 }
