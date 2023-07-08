@@ -442,7 +442,7 @@ a:is(:link, :active, :visited).active {
         background: #131313;
         
         top: 0;
-        padding-top: 25%; 
+        padding-top: 90px; 
         padding-bottom: 30%;
         opacity: 1;
         transition: all 0.5s ease;
