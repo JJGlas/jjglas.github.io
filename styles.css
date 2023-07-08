@@ -362,7 +362,7 @@ a:is(:link, :active, :visited).active {
 /*making the text underline active link in a different way so all browsers support it*/
 a:is(:link, :active, :visited).active { 
     content: '';  
-    background: #4837ff;
+    background: #00a39b;
     height: 0.15rem;
     width: 100%;
     bottom: 0.5rem;
