@@ -357,6 +357,7 @@ form .inputBox button:hover {
 a:is(:link, :active, :visited).active {   
     text-decoration: underline #4837ff 0.15rem;
     text-underline-offset: 0.5rem;
+    /*below lines are for safari only*/
     -webkit-text-decoration: underline;
     -webkit-text-decoration: #4837ff;
     -webkit-text-decoration: solid;
@@ -470,7 +471,7 @@ a:is(:link, :active, :visited).active {
         font-size: 1.4em;
         
         /*display:table;*/
-        /*not working for go vertically in center cant figure out why. if i dont put display table the objects flext across 100vh*/
+        /*not working for go vertically in center cant figure out why. if i dont put display table the objects flex across 100vh*/
         object-position: center;
     }
 
@@ -510,6 +511,7 @@ a:is(:link, :active, :visited).active {
     .navbar__logo{     
         
         Padding: 5px auto;
+        z-index: 9;
     }
 
 
@@ -699,6 +701,23 @@ a:is(:link, :active, :visited).active {
     opacity: 1;
 }
 */
+
+/* video moving avifs
+
+.video__container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*position: absolute;
+    object-position: 50% 50%;
+}
+*/
+/* when the box or video__container link is hovered, show iframe
+.video__container img:hover {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
 
 /* make iframe scale properly as i drag resize webpage*/
 .video__main {
