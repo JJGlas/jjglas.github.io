@@ -83,20 +83,25 @@
                 <div class="contactForm">
                     <!--https://formsubmit.co/el/xeriyo  is my form submit email address it will not work until i have a web server. does not work a web page browsed as html-->
                     <form action="https://formsubmit.co/jglas1193@gmail.com" method="POST">
+                        <!--honeypot-->
+                        <input type="text" name="_honey" style="display: none;">
+                        <!-- Diable Captcha https://youtu.be/Yg6POD0M30w-->
+                        <input type="hidden" name="_captcha" value="false">
+
                         <div class="inputBox">
-                            <input type="text" id="name" name="name" placeholder="Name" required>
+                            <input type="text" id="name" name="Name" placeholder="Name" required>
                         </div>
                         <div class="inputBox">
-                            <input type="text" id="email" name="email" placeholder="Email" required>
+                            <input type="text" id="email" name="Email" placeholder="Email" required>
                         </div>
                         <div class="inputBox">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <input type="text" id="subject" name="Subject" placeholder="Subject" required>
                         </div>
                         <div class="inputBox">
-                            <textarea required="required" rows="4" name="description" placeholder="Project description"></textarea>
+                            <textarea required="required" rows="4" name="Description" placeholder="Project description"></textarea>
                         </div>
                         <div class="inputBox">
-                            <input type="text" id="budget" placeholder="Budget($)" required>
+                            <input type="text" id="budget" name="budget" placeholder="Budget($)" required>
                         </div>
                         <div class="inputBox">
                         <!--target attribute opens the tos in a new tab-->
