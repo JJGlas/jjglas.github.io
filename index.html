@@ -64,10 +64,18 @@
             <h1>Editing | Compositing | VFX | Cinematography</h1>
             <!--<h2>Editing | Compositing | VFX | Cinematography</h2>-->
             <div class="main__container">
-                <!--background my plexus video-->
+                <!--background my plexus video. An image is displayed instead of video if old devices do not support VP9 video-->
+                <video autoplay loop muted plays-inline class="back-video" poster="images/floating_polygons.avif">
+                    <source src="images/floating_polygons_VP9.webm" type="video/webm" />
+                    <img src="images/floating_polygons.avif" />
+                </video>
+
+                <!--
                 <video autoplay loop muted plays-inline class="back-video">
                     <source src="images/floating_polygons_VP9.webm" type="video/webm">
                 </video>
+                -->
+
                 <!-- paste the video thumbnail links in here -->
                 <div class="box">
                     <!--On hover call the ... class. ?rel=0 at the end of the url disables recommended video's. Excellent.-->
