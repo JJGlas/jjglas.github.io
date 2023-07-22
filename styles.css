@@ -345,18 +345,21 @@ form .inputBox button:hover {
 .navbar__links {
     color:#fff;
     font-size: 1.2em; 
+    /*testing this line below*/
+    position: relative;
 }
 
 /*use this class only to style the font/text*/
 .navbar__shop {
     color:#fff;
     font-size: 1.2em; 
+    position: relative;
 }
 
 
-/*underline active link YT: https://youtu.be/JkuiKeNS2mg just need to make sure i have the class in my activePage.js called "active"*/
+/*underline active link YT: https://youtu.be/JkuiKeNS2mg just need to make sure i have the class in my activePage.js called "active"
 a:is(:link, :active, :visited).active {
-    /*hopefully adding the webkit prefix above the other line of code makes underline show in safari*/
+    /*hopefully adding the webkit prefix above the other line of code makes underline show in safari
     -webkit-text-decoration: underline #4837ff 0.15rem;
     
             text-decoration: underline #4837ff 0.15rem;
@@ -369,20 +372,20 @@ a:is(:link, :active, :visited).active {
     text-decoration-color: #4837ff;
     text-decoration-thickness: 0.15rem; /*thickness of underline not working
     text-underline-offset: 0.5rem;
-    */
-}
-
-/*making the text underline active link in a different way so all browsers support it
-a:is(:link, :active, :visited).active { 
-    content: '';  
-    background-color: #4837ff;
-    height: 0.15rem;
-    width: 100%;
-    bottom: 0.15rem;
-    position: absolute;
-    left: 0;
+    
 }
 */
+/*making the text underline active link in a different way so all browsers support it*/
+a:is(:link, :active, :visited).active { 
+    content: '';
+    height: 0.15rem;
+    width: 100%;  
+    background: #4837ff;
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+}
+
 /*
 .active {
     color: #4837ff;
