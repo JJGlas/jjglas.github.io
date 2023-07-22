@@ -363,10 +363,10 @@ a:is(:link, :active, :visited).active {
 
     text-underline-offset: 0.5rem;
     */
-    -webkit-text-decoration-line: underline;
-    text-decoration-line: underline;/*alternatively since safari des not support text-decoration-style*/
+    -webkit-text-decoration-line: underline 0.15rem;
+    text-decoration-line: underline 0.15rem;/*alternatively since safari des not support text-decoration-style*/
     text-decoration-color: #4837ff;
-    text-decoration-thickness: 0.15 rem;
+    /*text-decoration-thickness: 0.15rem;*/
     text-underline-offset: 0.5rem;
 }
 
