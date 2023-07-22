@@ -356,18 +356,20 @@ form .inputBox button:hover {
 
 /*underline active link YT: https://youtu.be/JkuiKeNS2mg just need to make sure i have the class in my activePage.js called "active"*/
 a:is(:link, :active, :visited).active {
-    /*hopefully adding the webkit prefix above the other line of code makes underline show in safari
+    /*hopefully adding the webkit prefix above the other line of code makes underline show in safari*/
     -webkit-text-decoration: underline #4837ff 0.15rem;
     
             text-decoration: underline #4837ff 0.15rem;
 
     text-underline-offset: 0.5rem;
-    */
-    -webkit-text-decoration-line: underline 0.15rem;
-    text-decoration-line: underline 0.15rem;/*alternatively since safari des not support text-decoration-style*/
+    
+    /*
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;/*alternatively since safari des not support text-decoration-style
     text-decoration-color: #4837ff;
-    /*text-decoration-thickness: 0.15rem;*/
+    text-decoration-thickness: 0.15rem; /*thickness of underline not working
     text-underline-offset: 0.5rem;
+    */
 }
 
 /*making the text underline active link in a different way so all browsers support it
