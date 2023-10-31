@@ -31,7 +31,8 @@ body,html {
     /*z-index is like layers in photoshop. The lower the number the lower down the layer is.
     setting 2 is lower than the navbar drop down menu of 99. Good, no overlaping elements.*/
     z-index: 2;
-    padding: 7rem 8%;
+    /*when bottom padding was only 7rem instead of 10rem I was getting white space on the bottom it was bad*/
+    padding: 7rem 8% 10rem 8%;
 }
 
 .contact .content {
@@ -242,7 +243,7 @@ body,html {
 
 
 
-/* still need to set max width and min width like neenkin */
+/*  */
 .contactForm .inputBox input,
 .contactForm .inputBox textarea {
     width: 100%;
@@ -272,10 +273,11 @@ form .inputBox button {
     color: #fff;
     cursor: pointer;
     font-size: 18px;
-    margin: 20px auto 0;
+    margin: 20px auto 3%;
     border-radius: 6px;
     border: 2px solid#fff;
     background: none;
+    
 }
 
 form .inputBox button:hover {
@@ -544,6 +546,7 @@ a:is(:link, :active, :visited).active {
         width: 50%;
         height: 80px;
         margin: 0;
+       
     }
 
     .navbar__toggle .bar {
