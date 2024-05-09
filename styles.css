@@ -457,7 +457,7 @@ a:is(:link, :active, :visited).active {
         width: 100%;
         /*position: absolute; used to have this*/
         position: fixed;
-        top: -100vh;
+        top: -100vh; /*can try svh if problems on ipad, or dvh*/
         opacity: 1;
         transition: all 0.5s ease;
         height: 100vh;
@@ -467,6 +467,8 @@ a:is(:link, :active, :visited).active {
         background: #131313;
         padding-top: 0; 
         padding-bottom: 0;
+        /*see if this below line stops the background scroll when the drop down is open*/
+        overscroll-behavior: contain;
     }
     /* guy says this is the java script that triggers the drop down. Try to prevent 3% margin and drop down zindex problem due to setting position absolute*/
     .navbar__menu.active {
@@ -489,8 +491,14 @@ a:is(:link, :active, :visited).active {
     }
 
     /*make body of page unscrollable when mobile drop down is visible*/
-    .lock-scroll {
-        /*position: fixed;*/
+    .scrollable {
+        overflow-y: scroll;
+        height: 200px;
+        background: #f8d0e6;
+        padding: 40px; 
+    }
+
+    .disable-scroll {
         overflow-y: hidden;
     }
 
@@ -527,7 +535,7 @@ a:is(:link, :active, :visited).active {
         z-index: 9;
     }
 
-
+    /*this is just the three horizontal bars*/
     #mobile-menu {
         position: absolute;
         top: 20%;
@@ -565,6 +573,12 @@ a:is(:link, :active, :visited).active {
 
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /*trying to prevent scroll when drop down bars are clicked on. note is not working because the overflow of mobile menue 
+    is not the same as the overflow of the entire page*/
+    #mobile-menu.lock-scroll {
+        overflow-y: hidden;
     }
 
 
