@@ -1,25 +1,18 @@
 // targeting the list of navabr links to get a java script animation going
-const menu = document.querySelector('#mobile-menu')
-const menuLinks = document.querySelector('.navbar__menu')
-//const lockScroll = document.querySelector('body')
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.navbar__menu');
+const body = document.body;
 
-// toggle the drop down list aniation when the three bars are clicked on
-menu.addEventListener('click', function() {
+// Toggle the mobile menu and lock scroll
+menu.addEventListener('click', function () {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
-    //lockScroll.classList.toggle('lock-scroll');
+
+    // Lock/unlock body scroll
+    if (menuLinks.classList.contains('active')) {
+        body.classList.add('lock-scroll');
+    } else {
+        body.classList.remove('lock-scroll');
+    }
 });
 
-
-/*
-if ($('#mobile__menu').is(':visible')) {
-    $('body').addClass("fixed-position");
-} else {
-    $('body').removeClass("fixed-position");
-}
-*/
-/*
-lockScroll {
-    document.body.classList.toggle('lock-scroll');
-}
-*/

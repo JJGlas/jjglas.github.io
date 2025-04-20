@@ -335,7 +335,7 @@ form .inputBox button:hover {
     cursor: pointer;
     width: 70px;
     padding-top: 5px; 
-    
+    z-index: 999;
     /*the 3 lines below are currently not working (doing nothing).
     align-items: center;
     justify-content: center;
@@ -431,7 +431,11 @@ a:is(:link, :active, :visited).active {
 
 /* .navbar__links:hover {} */
 
-
+/*make body of page unscrollable when mobile drop down is visible*/
+.lock-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
 
 /* Entering and styling all the subclasses ".navbar__..." of the nav class="navbar" */
 /* when width of window hits 960px actually lets put 55em for tablet mode the following classes are triggered */
@@ -467,8 +471,7 @@ a:is(:link, :active, :visited).active {
         background: #131313;
         padding-top: 0; 
         padding-bottom: 0;
-        /*see if this below line stops the background scroll when the drop down is open*/
-        overscroll-behavior: contain;
+        
     }
     /* guy says this is the java script that triggers the drop down. Try to prevent 3% margin and drop down zindex problem due to setting position absolute*/
     .navbar__menu.active {
@@ -480,7 +483,8 @@ a:is(:link, :active, :visited).active {
         padding-bottom: 30%;
         opacity: 1;
         transition: all 0.5s ease;
-        z-index: -1;
+        /*change z-index to -1 if all fails*/
+        z-index: 99;
         height: 100vh;
         /*height: 32.25rem;*/
         font-size: 1.4em;
@@ -488,18 +492,8 @@ a:is(:link, :active, :visited).active {
         /*display:table;*/
         /*not working for go vertically in center cant figure out why. if i dont put display table the objects flex across 100vh*/
         object-position: center;
-    }
-
-    /*make body of page unscrollable when mobile drop down is visible*/
-    .scrollable {
-        overflow-y: scroll;
-        height: 200px;
-        background: #f8d0e6;
-        padding: 40px; 
-    }
-
-    .disable-scroll {
-        overflow-y: hidden;
+        /*see if this below line stops the background scroll when the drop down is open. currently does nothing*/
+        overscroll-behavior: contain;
     }
 
     .navbar__toggle .bar {
@@ -530,9 +524,8 @@ a:is(:link, :active, :visited).active {
     }
 
     .navbar__logo{     
-        
         Padding: 5px auto;
-        z-index: 9;
+        z-index: 999;
     }
 
     /*this is just the three horizontal bars*/
@@ -541,6 +534,7 @@ a:is(:link, :active, :visited).active {
         top: 20%;
         right: 5%;
         transform: translate(5%, 20%);
+        z-index: 999;
     }
 
     .navbar__btn {
