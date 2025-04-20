@@ -437,6 +437,15 @@ a:is(:link, :active, :visited).active {
     height: 100vh;
 }
 
+/* The following locks scross when the mobile menu is open for the other pages aside from the video index page,
+because .mainb was still scrolling */
+
+body.lock-scroll,
+body.lock-scroll .mainb {
+    overflow: hidden;
+    height: 100vh;
+}
+
 /* Entering and styling all the subclasses ".navbar__..." of the nav class="navbar" */
 /* when width of window hits 960px actually lets put 55em for tablet mode the following classes are triggered */
 @media screen and (max-width: 55em) {
